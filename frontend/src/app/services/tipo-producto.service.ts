@@ -24,8 +24,6 @@ export class TipoProductoService {
       .get<{tipoProducto:TipoProductoI[]}>(`${this.base_path}/${id}`)
   }
 
-
-
   createTipoProducto(data: any):Observable<TipoProductoI>{
     return this.http.post<TipoProductoI>(this.base_path, data)
   }

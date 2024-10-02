@@ -36,10 +36,12 @@ export class AsideComponent {
       {
         label: 'Productos',
         icon: 'pi pi-fw pi-shopping-bag',
+        routerLink: '/productos'
       },
       {
         label: 'Ventas',
         icon: 'pi pi-fw pi-shopping-cart',
+        routerLink: '/ventas'
       }
 
     ];
