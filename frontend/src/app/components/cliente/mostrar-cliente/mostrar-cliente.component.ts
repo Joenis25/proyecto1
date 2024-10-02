@@ -30,7 +30,7 @@ export class MostrarClienteComponent implements OnInit{
       .subscribe({
         next: (data) => {
           this.clientes = data.cliente
-          // console.log(this.clientes)
+           console.log(data)
         }
       })
   }

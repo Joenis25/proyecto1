@@ -3,16 +3,16 @@
 
         <div class="flex justify-content-between flex-wrap">
             <h3 class="ml-4">
-                Registro de Clientes
+                Registro de TipoProductos
             </h3>
             <div class="mt-2 mr-2">
                 <a 
                   pButton 
                   pRipple
-                  label="Crear Clientes" 
+                  label="Crear TipoProductos" 
                   icon="pi pi-user-plus"
                   class="bg-cyan-600"
-                  [routerLink]="['/clientes/nuevo']">
+                  [routerLink]="['/tipoproductos/nuevo']">
                 </a>
 
 
@@ -21,26 +21,20 @@
         </div>
     </ng-template>
     <p>
-        <p-table [value]="clientes">
+        <p-table [value]="tipoProductos">
             <ng-template pTemplate="header">
                 <tr>
-                    <th>Nombre</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>password</th>
+                    <th> id</th>
+                    <th>nombreTipo</th>
                     <th>activo</th>
                     <th class="flex justify-content-center flex-wrap">Acciones</th>
                 </tr>
             </ng-template>
-            <ng-template pTemplate="body" let-clientes>
+            <ng-template pTemplate="body" let-tipoProductos>
                 <tr>
-                    <td>{{ clientes.nombreCliente }}</td>
-                    <td>{{ clientes.direccionCliente }}</td>
-                    <td>{{ clientes.telefonoCliente }}</td>
-                    <td>{{ clientes.correoCliente }}</td>
-                    <td>{{ clientes.passwordCliente }}</td>
-                    <td>{{ clientes.activo }}</td>
+                    <td>{{ tipoProductos.id }}</td>
+                    <td>{{ tipoProductos.nombreTipo }}</td>
+                    <td>{{ tipoProductos.activo }}</td>
                     <td>
                         <button 
                         pButton 
@@ -56,7 +50,7 @@
                             icon="pi pi-sync"
                             severity="warning"
                             class="mr-1"
-                            [routerLink]="['/clientes/edit', clientes.id]">
+                            [routerLink]="['/tipoproductos/edit', tipoProductos.id]">
                         </a>
 
                         <button 
@@ -65,7 +59,7 @@
                             severity="danger"
                             icon="pi pi-eraser"
                             class="mr-1"
-                            (click)="eliminar(clientes.id)"
+                            (click)="eliminar(tipoProductos.id)"
                         >
 
                         </button>

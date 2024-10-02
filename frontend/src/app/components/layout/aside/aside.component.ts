@@ -31,6 +31,7 @@ export class AsideComponent {
       {
         label: 'Tipo Productos',
         icon: 'pi pi-fw pi-qrcode',
+        routerLink: '/tipoproductos'
       },
       {
         label: 'Productos',
@@ -43,4 +44,5 @@ export class AsideComponent {
 
     ];
   }
+  
 }

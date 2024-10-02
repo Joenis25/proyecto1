@@ -1,4 +1,4 @@
-<p-card header="Crear Clientes"  [style]="{ width: '100%' }">
+<p-card header="Crear TipoProductos"  [style]="{ width: '100%' }">
     <ng-template pTemplate="header">
 
     </ng-template>
@@ -10,14 +10,14 @@
           <div class="col-12 sm:col-6">
               <div class="p-inputgroup mb-1">
                   <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-                  <input class="w-12" type="text" pInputText formControlName="nombre" placeholder="nombreCliente"  title="nombreCliente">         
+                  <input class="w-12" type="text" pInputText formControlName="id" placeholder="id"  title="id">         
               </div>
           </div>
 
           <div class="col-12 sm:col-6">
             <div class="p-inputgroup mb-1 ">
                   <span class="p-inputgroup-addon"><i class="pi pi-wallet"></i></span>
-                  <input class="w-12" type="text" pInputText formControlName="direccion" placeholder="direccionCliente" title="direccionCliente" >          
+                  <input class="w-12" type="text" pInputText formControlName="nombre" placeholder="nombreTipo" title="nombreTipo" >          
             </div>
           </div>
 
@@ -27,28 +27,11 @@
           <div class="col-12 sm:col-6">
               <div class="p-inputgroup mb-1">
                   <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
-                  <input class="w-12" type="text" pInputText formControlName="telefono" placeholder="telefonoCliente"  title="telefonoCliente">         
+                  <input class="w-12" type="text" pInputText formControlName="activo" placeholder="activo"  title="telefonoCliente">         
               </div>
           </div>
 
-          <div class="col-12 sm:col-6">
-            <div class="p-inputgroup mb-1 ">
-                  <span class="p-inputgroup-addon"><i class="pi pi-bookmark"></i></span>
-                  <input class="w-12" type="email" pInputText formControlName="correo" placeholder="correoCliente" title="correoCliente" >          
-            </div>
-          </div>
 
-
-
-        </div>
-
-        <div class="grid">
-          <div class="col-12 sm:col-6">
-            <div class="p-inputgroup mb-1 ">
-              <span class="p-inputgroup-addon"><i class="pi pi-comments"></i></span>
-              <input class="w-12" type="password" pInputText formControlName="password" placeholder="passwordCliente" title="passwordCliente" >          
-          </div>
-          </div>
         </div>
 
         <div class="flex justify-content-center flex-wrap">
@@ -82,4 +65,3 @@
 
     </ng-template>
   </p-card>
-
