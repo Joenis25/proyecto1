@@ -43,6 +43,7 @@ export class ActualizarTipoProductoComponent implements OnInit {
     this.tipoProductoService.getOneTipoProducto(id)
       .subscribe({
         next: (data) => {
+          console.log(data);
           this.form.patchValue(data.tipoProducto); // Carga los datos del cliente en el formulario
         },
         error: (err) => {
@@ -74,7 +75,7 @@ export class ActualizarTipoProductoComponent implements OnInit {
   }
 
   // Getters del formulario
-  get idTipo() { return this.form.get('idTipo'); }
+/*   get idTipo() { return this.form.get('idTipo'); } */
   get nombreTipo() { return this.form.get('nombreTipo'); }
   get activo() { return this.form.get('activo'); }
 }

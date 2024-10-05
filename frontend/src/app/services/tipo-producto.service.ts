@@ -29,10 +29,10 @@ export class TipoProductoService {
   }
 
   updateTipoProducto(id: number, data: any): Observable<TipoProductoI> {
-    return this.http.put<TipoProductoI>(`${this.base_path}/${id}`, data);
+    return this.http.patch<TipoProductoI>(`${this.base_path}/${id}`, data);
   }
 
   deleteTipoProducto(id: number): Observable<TipoProductoI> {
-    return this.http.delete<TipoProductoI>(`${this.base_path}/eliminar1/${id}`);
+    return this.http.delete<TipoProductoI>(`${this.base_path}/${id}`);
   }
 }

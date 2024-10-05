@@ -27,8 +27,8 @@ export class CrearTipoProductoComponent implements OnInit {
   ) {
     // Inicialización del formulario en el constructor
     this.form = this.formBuilder.group({
-      id: ['', [Validators.required]],
-      nomnreTipo: ['', [Validators.required]],
+      /* id: ['', [Validators.required]], */
+      nombreTipo: ['', [Validators.required]],
       activo: ['', [Validators.required]],
     });
   }
@@ -55,7 +55,7 @@ export class CrearTipoProductoComponent implements OnInit {
   }
 
   // Asegúrate de que los nombres de los controles de formulario sean correctos
-  get id() { return this.form.get('id'); }
+  /* get id() { return this.form.get('id'); } */
   get nombreTipo() { return this.form.get('nombreTipo'); }
   get activo() { return this.form.get('activo'); }
 }

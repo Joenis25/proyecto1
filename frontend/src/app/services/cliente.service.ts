@@ -31,10 +31,10 @@ export class ClienteService {
   }
 
   updateCliente(id: number, data: any): Observable<ClienteI> {
-    return this.http.put<ClienteI>(`${this.base_path}/${id}`, data);
+    return this.http.patch<ClienteI>(`${this.base_path}/${id}`, data);
   }
 
   deleteCliente(id: number): Observable<ClienteI> {
-    return this.http.delete<ClienteI>(`${this.base_path}/clientes/:id/${id}`);
+    return this.http.delete<ClienteI>(`${this.base_path}/${id}`);
   }
 }

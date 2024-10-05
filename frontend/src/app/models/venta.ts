@@ -1,5 +1,4 @@
 export interface VentaI {
-
     fechaVenta: string;
     subtotalVenta: number;
     impuestosVenta: number;

@@ -32,6 +32,7 @@ export class CrearProductoComponent implements OnInit{
       precioProducto: ['', [Validators.required]],
       stockMin: ['', [Validators.required]],
       cantidadProducto: ['', [Validators.required]],
+      tipoProductoId: ['', [Validators.required]],
       activo: ['', [Validators.required]],
     });
   }
@@ -63,5 +64,6 @@ export class CrearProductoComponent implements OnInit{
   get precioProducto() { return this.form.get('precioProducto'); }
   get stockMin() { return this.form.get('stockMin'); }
   get cantidadProducto() { return this.form.get('cantidadProducto'); }
+  get tipoProductoId() { return this.form.get('tipoProductoId'); }
   get activo() { return this.form.get('activo'); }
 }

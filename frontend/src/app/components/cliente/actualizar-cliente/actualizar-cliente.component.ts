@@ -30,11 +30,11 @@ export class ActualizarClienteComponent implements OnInit {
     // Inicialización del formulario
     this.form = this.formBuilder.group({
       id: [''],
-      nombre: ['', [Validators.required]],
-      direccion: ['', [Validators.required]],
-      telefono: ['', [Validators.required]],
-      correo: ['', [Validators.required]],
-      password: ['', [Validators.required]],
+      nombreCliente: ['', [Validators.required]],
+      direccionCliente: ['', [Validators.required]],
+      telefonoCliente: ['', [Validators.required]],
+      correoCliente: ['', [Validators.required]],
+      passwordCliente: ['', [Validators.required]],
     });
 
     // Obtención del id del cliente y los datos del cliente
@@ -46,12 +46,16 @@ export class ActualizarClienteComponent implements OnInit {
     this.clienteService.getOneCliente(id)
       .subscribe({
         next: (data) => {
-          this.form.patchValue(data.cliente); // Carga los datos del cliente en el formulario
+          console.log(data);
+          
+          this.form.patchValue(data); // Carga los datos del cliente en el formulario
         },
         error: (err) => {
           console.error('Error obteniendo cliente:', err);
         }
       });
+
+      
   }
 
   onSubmit(): void {
@@ -77,10 +81,10 @@ export class ActualizarClienteComponent implements OnInit {
   }
 
   // Getters del formulario
-  get nombreCliente() { return this.form.get('nombre'); }
-  get direccionCliente() { return this.form.get('direccion'); }
-  get telefonoCliente() { return this.form.get('telefono'); }
-  get correoCliente() { return this.form.get('correo'); }
-  get passwordCliente() { return this.form.get('password'); }
+  get nombreCliente() { return this.form.get('nombreCliente'); }
+  get direccionCliente() { return this.form.get('direccionCliente'); }
+  get telefonoCliente() { return this.form.get('telefonoCliente'); }
+  get correoCliente() { return this.form.get('correoCliente'); }
+  get passwordCliente() { return this.form.get('passwordCliente'); }
 }
 

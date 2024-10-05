@@ -25,18 +25,16 @@ export class ProductoService {
       .get<{producto:ProductoI[]}>(`${this.base_path}/${id}`)
   }
 
-
-
   createProducto(data: any):Observable<ProductoI>{
     return this.http.post<ProductoI>(this.base_path, data)
   }
 
   updateProducto(id: number, data: any): Observable<ProductoI> {
-    return this.http.put<ProductoI>(`${this.base_path}/${id}`, data);
+    return this.http.patch<ProductoI>(`${this.base_path}/${id}`, data);
   }
 
   deleteProducto(id: number): Observable<ProductoI> {
-    return this.http.delete<ProductoI>(`${this.base_path}/eliminar1/${id}`);
+    return this.http.delete<ProductoI>(`${this.base_path}/${id}`);
   }
 }
 

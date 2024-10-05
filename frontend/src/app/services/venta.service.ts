@@ -24,18 +24,16 @@ export class VentaService {
       .get<{venta:VentaI[]}>(`${this.base_path}/${id}`)
   }
 
-
-
   createVenta(data: any):Observable<VentaI>{
     return this.http.post<VentaI>(this.base_path, data)
   }
 
   updateVenta(id: number, data: any): Observable<VentaI> {
-    return this.http.put<VentaI>(`${this.base_path}/${id}`, data);
+    return this.http.patch<VentaI>(`${this.base_path}/${id}`, data);
   }
 
   deleteVenta(id: number): Observable<VentaI> {
-    return this.http.delete<VentaI>(`${this.base_path}/eliminar1/${id}`);
+    return this.http.delete<VentaI>(`${this.base_path}/${id}`);
   }
 }
 

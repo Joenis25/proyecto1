@@ -26,11 +26,11 @@ export class CrearClienteComponent implements OnInit {
   ) {
     // Inicialización del formulario en el constructor
     this.form = this.formBuilder.group({
-      nombre: ['', [Validators.required]],
-      direccion: ['', [Validators.required]],
-      telefono: ['', [Validators.required]],
-      correo: ['', [Validators.required]],
-      password: ['', [Validators.required]],
+      nombreCliente: ['', [Validators.required]],
+      direccionCliente: ['', [Validators.required]],
+      telefonoCliente: ['', [Validators.required]],
+      correoCliente: ['', [Validators.required]],
+      passwordCliente: ['', [Validators.required]],
     });
   }
 
@@ -56,9 +56,9 @@ export class CrearClienteComponent implements OnInit {
   }
 
   // Asegúrate de que los nombres de los controles de formulario sean correctos
-  get nombreCliente() { return this.form.get('nombre'); }
-  get direccionCliente() { return this.form.get('direccion'); }
-  get telefonoCliente() { return this.form.get('telefono'); }
-  get correoCliente() { return this.form.get('correo'); }
-  get passwordCliente() { return this.form.get('password'); }
+  get nombreCliente() { return this.form.get('nombreCliente'); }
+  get direccionCliente() { return this.form.get('direccionCliente'); }
+  get telefonoCliente() { return this.form.get('telefonoCliente'); }
+  get correoCliente() { return this.form.get('correoCliente'); }
+  get passwordCliente() { return this.form.get('passwordCliente'); }
 }

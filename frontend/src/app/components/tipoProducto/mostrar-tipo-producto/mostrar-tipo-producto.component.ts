@@ -37,7 +37,7 @@ export class MostrarTipoProductoComponent implements OnInit{
 
 
   eliminar(id: number): void{
-    this.router.navigateByUrl('/tipoProductos');
+    this.router.navigateByUrl('/tipoproductos');
     this.tipoProductoService.deleteTipoProducto(id).subscribe(
       () => {
         // this.messageService.add({severity:'warn', summary: 'Notificación', detail: 'TipoProducto Eliminado', life:5000});
@@ -45,7 +45,7 @@ export class MostrarTipoProductoComponent implements OnInit{
       },
       err => {
         console.log('error')
-        this.router.navigateByUrl('/tipoProductos');
+        this.router.navigateByUrl('/tipoproductos');
 
       }
     );
